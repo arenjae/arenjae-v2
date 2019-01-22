@@ -1,0 +1,14 @@
+{
+    "name": "arenjae",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {},
+    "scripts": {},
+    "eslintConfig": {},
+    "devDependencies": {
+        "serverless": "^1.36.2",
+        "serverless-aws-documentation": "^1.1.0",
+        "serverless-domain-manager": "^2.6.12",
+        "serverless-stack-output": "^0.2.3"
+    }
+}

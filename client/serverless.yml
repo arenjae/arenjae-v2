@@ -1,0 +1,20 @@
+service: arenjae-client
+# To build client: $ serverless client build -p npm -c "run build"
+# To deploy client $: serverless client deploy --no-confirm
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs8.10
+  stage: dev
+  profile: default
+  environment: 
+    REACT_APP_BACKEND_ENDPOINT: ${cf:api.ServiceEndpoint}
+plugins:
+- serverless-finch
+
+custom:
+  client:
+    bucketName: arenjae-client
+    distributionFolder: ./build
+    errorDocument: index.html
