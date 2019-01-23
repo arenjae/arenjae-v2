@@ -17,8 +17,6 @@ script:
   - cd ..
   - cd client && npm ci
   - cd ..
-  
-deploy:
   - cd api && npm run deploy
   - cd ..
   - cd client && npm run build && npm run deploy
