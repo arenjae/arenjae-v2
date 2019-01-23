@@ -11,6 +11,9 @@ cache:
   - "client/node_modules"
   - "api/node_modules"
   
+before_install:
+  - npm i -g npm@6.6.0
+  
 script:
   # npm install api and client
   - cd api
