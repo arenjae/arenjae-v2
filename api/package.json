@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {},
-    "scripts": {},
+    "scripts": {
+        "deploy" : "serverless deploy --no-confirm"
+    },
     "eslintConfig": {},
     "devDependencies": {
         "serverless": "^1.36.2",
