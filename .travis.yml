@@ -12,11 +12,20 @@ cache:
   - "api/node_modules"
   
 script:
-  - npm install -g serverless
-  - cd api && npm ci
+  # npm install api and client
+  - cd api
+  - npm ci
   - cd ..
-  - cd client && npm ci
+  - cd client
+  - npm ci
   - cd ..
-  - cd api && npm run deploy
+  
+  # Now use serverless to deploy api
+  - cd api
+  - npm run deploy
   - cd ..
-  - cd client && npm run build && npm run deploy
+  
+  # Now build and deploy client
+  - cd client
+  - npm run build
+  - npm run deploy
