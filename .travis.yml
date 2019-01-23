@@ -1,0 +1,24 @@
+language: node_js
+
+#safelist
+branches:
+  only:
+  - master
+  - stable
+
+cache:
+  directories:
+  - "client/node_modules"
+  - "api/node_modules"
+  
+script:
+  - npm install -g serverless
+  - cd api && npm ci
+  - cd ..
+  - cd client && npm ci
+  - cd ..
+  
+deploy:
+  - cd api && npm run deploy
+  - cd ..
+  - cd client && npm run build && npm run deploy
