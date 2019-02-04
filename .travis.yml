@@ -17,10 +17,12 @@ before_install:
   - npm i -g npm@6.6.0
   
 script:
-  # npm install api and client
+  # npm install api
   - cd api
   - npm ci
   - cd ..
+
+  # npm install client
   - cd client
   - npm ci
   - cd ..
