@@ -34,5 +34,6 @@ script:
   
   # Now build and deploy client
   - cd client
+  - npm run create-env
   - npm run build
   - npm run deploy

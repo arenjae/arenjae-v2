@@ -14,7 +14,11 @@ provider:
   region: us-west-2
 
 plugins:
+  - serverless-stack-output
 
+custom:
+  output: 
+    file: stack.json
 
 # The `functions` block defines what code to deploy
 functions:

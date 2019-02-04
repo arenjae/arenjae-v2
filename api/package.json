@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {},
     "scripts": {
-        "deploy" : "serverless deploy --no-confirm"
+        "deploy": "serverless deploy --no-confirm"
     },
     "eslintConfig": {},
     "devDependencies": {

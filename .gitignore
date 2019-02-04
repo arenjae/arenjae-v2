@@ -1,0 +1,9 @@
+logs
+*.log
+coverage
+build/
+.npm
+.eslintcache
+.env
+node_modules/
+.*/

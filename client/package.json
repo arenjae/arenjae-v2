@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "create-env": "X=`cat ../api/stack.json | jq -r '.ServiceEndpoint'` && echo REACT_APP_API=$X >> .env",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "serverless client deploy --no-confirm"
@@ -24,7 +25,6 @@
   ],
   "devDependencies": {
     "serverless": "^1.36.2",
-    "serverless-finch": "^2.3.2",
-    "serverless-build-client": "^2.1.3"
+    "serverless-finch": "^2.3.2"
   }
 }
